@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
 
-    public float jumpForce = 200f;
+    Rigidbody2D rigidbody2D;
 
-    public int MaxJumpCount = 2;
-    private int jumpCount = 0;
+    public float speed = 3f;
+    
+    private float playerSpeed;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        // Rigidbody2Dコンポーネントの取得
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
-
-    private void Update()
+    
+    // Update is called once per frame
+    void Update()
     {
-        // スペースを押したらジャンプさせる
-        // MaxJumpCountの数だけジャンプできる
-        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < MaxJumpCount)
-        {
-            this.rigidbody2D.AddForce(transform.up * jumpForce);
-            jumpCount++;
-        }
+        
 
-    }
+            // 左キーを押したら左方向へ進む
+            if (Input.GetKey(KeyCode.A)) playerSpeed = -speed;
+        // 右キーを押したら右方向へ進む
+        else if (Input.GetKey(KeyCode.D)) playerSpeed = speed;
+        // 何もおさなかったら止まる
+        else playerSpeed = 0;
 
-    // 床に着地したら、jumpCountを0にする
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            jumpCount = 0;
-        }
+        rigidbody2D.velocity = new Vector2(playerSpeed, rigidbody2D.velocity.y);
+        
+       
+        
     }
 }
