@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-
     Rigidbody2D rigidbody2D;
+
+    public float fMoveSpeed = 7.0f;     // 移動値
+    //---------------------------
+    //          追加
+    public GameObject BulletObj;        // 弾のゲームオブジェクト
+    //---------------------------
+
+   
 
     public float speed = 3f;
     
