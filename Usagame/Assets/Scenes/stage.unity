@@ -382,8 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1820d96844bf4d4cbb8f018285e7a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fMoveSpeed: 7
-  BulletObj: {fileID: 5080560324957789759, guid: bef1c663e9fc57b4a8b6ba1e69b8d66c, type: 3}
   speed: 3
 --- !u!50 &2122721482
 Rigidbody2D:
@@ -502,5 +500,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d6405da12436c4e9861279d5b69572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 200
+  jumpForce: 400
   MaxJumpCount: 2
