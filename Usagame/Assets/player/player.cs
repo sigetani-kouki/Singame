@@ -19,7 +19,7 @@ public class player : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-        bullet = Resources.Load("shot") as GameObject;
+        //bullet = Resources.Load("shot") as GameObject;
     }
     
     // Update is called once per frame
@@ -35,16 +35,16 @@ public class player : MonoBehaviour
 
 
         // 弾のイ//ショット
-        if (Input.GetMouseButtonDown(0))
-        {
+       // if (Input.GetMouseButtonDown(0))
+        //{
             //プレハブ召喚
-            GameObject bullet = Resources.Load("shot") as GameObject;
-            bullet.transform.position = this.transform.position;
-        }
-        Instantiate(
-            bullet, // 生成するオブジェクトのプレハブ
-            this.transform.position, // 初期位置
-            Quaternion.identity); // 初期回転情報
+        //    GameObject bullet = Resources.Load("shot") as GameObject;
+        //    bullet.transform.position = this.transform.position;
+        //}
+        //Instantiate(
+          //  bullet, // 生成するオブジェクトのプレハブ
+            //this.transform.position, // 初期位置
+            //Quaternion.identity); // 初期回転情報
 
 
        
