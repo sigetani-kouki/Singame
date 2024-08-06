@@ -22,13 +22,13 @@ public class wolf : MonoBehaviour
         // （ポイント）マイナスをかけることで逆方向に移動する。
         transform.Translate(transform.right * Time.deltaTime * 3 * num);
 
-        if (pos.x > -2)
+        if (pos.x > -1)
         {
-            num = -1;
+            num = -3;
         }
-        if (pos.x < -11)
+        if (pos.x < 3)
         {
-            num = 1;
+            num = 3;
         }
     }
 }
